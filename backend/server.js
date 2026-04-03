@@ -24,9 +24,9 @@ app.get('/health', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.json({
-        name: "Văn Quý",
-        studentId: "xxxx",
-        class: "xxxx"
+        name: "Hồ Văn Quý ",
+        studentId: "2251220090",
+        class: "22CT1"
     })
 })
 

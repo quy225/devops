@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
+import { Link, Route, Routes } from 'react-router-dom'
+import About from './About'
 import './App.css'
 
-function App() {
+function Home() {
   type Task = {
     _id: string
     name: string
@@ -63,6 +65,20 @@ function App() {
           ))
         )}
       </div>
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <div>
+      <nav style={{ padding: "10px", backgroundColor: "#f0f0f0" }}>
+        <Link to="/">Home</Link> | <Link to="/about">About</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </div>
   )
 }
